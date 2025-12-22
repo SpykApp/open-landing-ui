@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="StaffShell features - Discover powerful tools for scheduling, time tracking, payroll, compliance, and more.">
+    <title>Features - StaffShell</title>
+    
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%236B5CE7'/%3E%3Cpath d='M8 12h16M8 16h12M8 20h8' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                        <rect width="40" height="40" rx="10" fill="url(#lg)"/>
+                        <path d="M10 15h20M10 20h15M10 25h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+                        <defs><linearGradient id="lg" x1="0" y1="0" x2="40" y2="40"><stop stop-color="#6B5CE7"/><stop offset="1" stop-color="#8B7DF2"/></linearGradient></defs>
+                    </svg>
+                    StaffShell
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvas">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="navbarOffcanvas">
+                    <div class="offcanvas-header">
+                        <span class="navbar-brand">StaffShell</span>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav mx-auto">
+                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="features.html">Features</a></li>
+                            <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                            <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                        </ul>
+                        <div class="header-cta d-flex align-items-center gap-3">
+                            <a href="#" class="nav-link d-none d-lg-block">Sign In</a>
+                            <a href="#" class="btn btn-primary">Start Free Trial</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Powerful Features for Modern Workforce Management</h1>
+            <p class="lead">Everything you need to manage scheduling, time tracking, payroll, and compliance in one platform.</p>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active">Features</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Feature: Scheduling -->
+    <section class="py-5">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <span class="subtitle d-inline-block mb-3" style="background: var(--ss-bg-purple-light); padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.875rem; color: var(--ss-primary); font-weight: 600;">SCHEDULING</span>
+                    <h2>Smart Scheduling That Works for Everyone</h2>
+                    <p class="lead text-muted">AI-powered scheduling that considers employee preferences, skills, certifications, and labor laws to create optimal schedules in minutes.</p>
+                    <ul class="list-unstyled">
+                        <li class="d-flex align-items-start mb-3">
+                            <i class="bi bi-check-circle-fill text-success me-3 mt-1"></i>
+                            <div><strong>Drag-and-drop interface</strong> - Build schedules visually with an intuitive calendar view</div>
+                        </li>
+                        <li class="d-flex align-items-start mb-3">
+                            <i class="bi bi-check-circle-fill text-success me-3 mt-1"></i>
+                            <div><strong>Auto-scheduling</strong> - Let AI create optimized schedules based on your rules</div>
+                        </li>
+                        <li class="d-flex align-items-start mb-3">
+                            <i class="bi bi-check-circle-fill text-success me-3 mt-1"></i>
+                            <div><strong>Shift templates</strong> - Save and reuse common schedule patterns</div>
+                        </li>
+                        <li class="d-flex align-items-start mb-3">
+                            <i class="bi bi-check-circle-fill text-success me-3 mt-1"></i>
+                            <div><strong>Conflict detection</strong> - Automatic alerts for overtime, double-booking, and compliance issues</div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-6">
+                    <svg viewBox="0 0 500 350" fill="none" class="img-fluid rounded-xl shadow-lg">
+                        <rect width="500" height="350" rx="16" fill="#F8F9FA"/>
+                        <rect x="20" y="20" width="460" height="50" rx="8" fill="white" stroke="#E9ECEF" stroke-width="2"/>
+                        <text x="40" y="52" font-family="Poppins" font-size="14" font-weight="600" fill="#1A1A2E">Schedule - Week of Nov 18</text>
+                        <rect x="20" y="90" width="60" height="240" rx="8" fill="#F0F2F5"/>
+                        <text x="50" y="120" font-family="Poppins" font-size="10" fill="#6C757D" text-anchor="middle">Mon</text>
+                        <text x="50" y="160" font-family="Poppins" font-size="10" fill="#6C757D" text-anchor="middle">Tue</text>
+                        <text x="50" y="200" font-family="Poppins" font-size="10" fill="#6C757D" text-anchor="middle">Wed</text>
+                        <text x="50" y="240" font-family="Poppins" font-size="10" fill="#6C757D" text-anchor="middle">Thu</text>
+                        <text x="50" y="280" font-family="Poppins" font-size="10" fill="#6C757D" text-anchor="middle">Fri</text>
+                        <rect x="100" y="105" width="120" height="25" rx="6" fill="#6B5CE7"/>
+                        <rect x="240" y="105" width="100" height="25" rx="6" fill="#4A90E2"/>
+                        <rect x="100" y="145" width="80" height="25" rx="6" fill="#2ECC71"/>
+                        <rect x="200" y="145" width="140" height="25" rx="6" fill="#6B5CE7"/>
+                        <rect x="100" y="185" width="100" height="25" rx="6" fill="#FF6B6B"/>
+                        <rect x="220" y="185" width="120" height="25" rx="6" fill="#F1C40F"/>
+                        <rect x="100" y="225" width="140" height="25" rx="6" fill="#4A90E2"/>
+                        <rect x="260" y="225" width="80" height="25" rx="6" fill="#2ECC71"/>
+                        <rect x="100" y="265" width="110" height="25" rx="6" fill="#6B5CE7"/>
+                        <rect x="230" y="265" width="130" height="25" rx="6" fill="#FF6B6B"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature: Time Tracking -->
+    <section class="py-5 bg-light-soft">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6 order-lg-2 mb-4 mb-lg-0">
+                    <span class="subtitle d-inline-block mb-3" style="background: rgba(74,144,226,0.15); padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.875rem; color: #4A90E2; font-weight: 600;">TIME TRACKING</span>
+                    <h2>Accurate Time Tracking, Anywhere</h2>
+                    <p class="lead text-muted">Multiple clock-in options with GPS verification and biometric support eliminate time theft and ensure accurate records.</p>
+                    <ul class="list-unstyled">
+                        <li class="d-flex align-items-start mb-3">
+                            <i class="bi bi-check-circle-fill text-success me-3 mt-1"></i>
+                            <div><strong>Mobile clock-in</strong> - Employees can clock in from their phones with GPS verification</div>
+                        </li>
+                        <li class="d-flex align-items-start mb-3">
+                            <i class="bi bi-check-circle-fill text-success me-3 mt-1"></i>
+                            <div><strong>Geofencing</strong> - Set boundaries for where employees can clock in</div>
+                        </li>
+                        <li class="d-flex align-items-start mb-3">
+                            <i class="bi bi-check-circle-fill text-success me-3 mt-1"></i>
+                            <div><strong>Photo verification</strong> - Optional selfie capture to prevent buddy punching</div>
+                        </li>
+                        <li class="d-flex align-items-start mb-3">
+                            <i class="bi bi-check-circle-fill text-success me-3 mt-1"></i>
+                            <div><strong>Break tracking</strong> - Automatic break reminders and tracking for compliance</div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <svg viewBox="0 0 500 350" fill="none" class="img-fluid rounded-xl shadow-lg">
+                        <rect width="500" height="350" rx="16" fill="white"/>
+                        <rect x="150" y="30" width="200" height="290" rx="24" fill="#1A1A2E"/>
+                        <rect x="160" y="60" width="180" height="230" rx="4" fill="white"/>
+                        <circle cx="250" cy="320" r="15" fill="#333"/>
+                        <text x="250" y="95" font-family="Poppins" font-size="12" font-weight="600" fill="#1A1A2E" text-anchor="middle">Clock In</text>
+                        <circle cx="250" cy="160" r="45" fill="#6B5CE7"/>
+                        <path d="M235 160L245 170L265 150" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        <text x="250" y="230" font-family="Poppins" font-size="18" font-weight="700" fill="#1A1A2E" text-anchor="middle">9:02 AM</text>
+                        <text x="250" y="250" font-family="Poppins" font-size="10" fill="#6C757D" text-anchor="middle">Successfully clocked in</text>
+                        <rect x="180" y="265" width="140" height="15" rx="4" fill="#E9ECEF"/>
+                        <rect x="180" y="265" width="100" height="15" rx="4" fill="#2ECC71"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature: Payroll -->
+    <section class="py-5">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <span class="subtitle d-inline-block mb-3" style="background: rgba(46,204,113,0.15); padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.875rem; color: #2ECC71; font-weight: 600;">PAYROLL</span>
+                    <h2>Payroll Processing Made Easy</h2>
+                    <p class="lead text-muted">Process payroll in minutes with automatic calculations, tax compliance, and direct deposit support.</p>
+                    <ul class="list-unstyled">
+                        <li class="d-flex align-items-start mb-3">
+                            <i class="bi bi-check-circle-fill text-success me-3 mt-1"></i>
+                            <div><strong>Automatic calculations</strong> - Overtime, differentials, and deductions computed automatically</div>
+                        </li>
+                        <li class="d-flex align-items-start mb-3">
+                            <i class="bi bi-check-circle-fill text-success me-3 mt-1"></i>
+                            <div><strong>Tax compliance</strong> - Federal, state, and local taxes calculated and filed</div>
+                        </li>
+                        <li class="d-flex align-items-start mb-3">
+                            <i class="bi bi-check-circle-fill text-success me-3 mt-1"></i>
+                            <div><strong>Direct deposit</strong> - Pay employees directly to their bank accounts</div>
+                        </li>
+                        <li class="d-flex align-items-start mb-3">
+                            <i class="bi bi-check-circle-fill text-success me-3 mt-1"></i>
+                            <div><strong>Pay stubs</strong> - Digital pay stubs accessible via the employee portal</div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-6">
+                    <svg viewBox="0 0 500 350" fill="none" class="img-fluid rounded-xl shadow-lg">
+                        <rect width="500" height="350" rx="16" fill="#F8F9FA"/>
+                        <rect x="30" y="30" width="200" height="130" rx="12" fill="white" stroke="#E9ECEF" stroke-width="2"/>
+                        <text x="50" y="60" font-family="Poppins" font-size="11" fill="#6C757D">Total Payroll</text>
+                        <text x="50" y="95" font-family="Poppins" font-size="28" font-weight="700" fill="#1A1A2E">$42,580</text>
+                        <rect x="50" y="115" width="80" height="6" rx="3" fill="#2ECC71"/>
+                        <text x="50" y="140" font-family="Poppins" font-size="10" fill="#2ECC71">+12% from last period</text>
+                        <rect x="270" y="30" width="200" height="130" rx="12" fill="white" stroke="#E9ECEF" stroke-width="2"/>
+                        <text x="290" y="60" font-family="Poppins" font-size="11" fill="#6C757D">Employees Paid</text>
+                        <text x="290" y="95" font-family="Poppins" font-size="28" font-weight="700" fill="#1A1A2E">128</text>
+                        <circle cx="420" cy="95" r="30" fill="#6B5CE7" opacity="0.2"/>
+                        <path d="M410 95L420 85L430 95L420 105Z" fill="#6B5CE7"/>
+                        <rect x="30" y="180" width="440" height="140" rx="12" fill="white" stroke="#E9ECEF" stroke-width="2"/>
+                        <text x="50" y="210" font-family="Poppins" font-size="12" font-weight="600" fill="#1A1A2E">Recent Transactions</text>
+                        <rect x="50" y="230" width="400" height="30" rx="6" fill="#F8F9FA"/>
+                        <text x="70" y="250" font-family="Poppins" font-size="10" fill="#1A1A2E">Sarah Johnson</text>
+                        <text x="380" y="250" font-family="Poppins" font-size="10" font-weight="600" fill="#2ECC71">$3,450</text>
+                        <rect x="50" y="270" width="400" height="30" rx="6" fill="#F8F9FA"/>
+                        <text x="70" y="290" font-family="Poppins" font-size="10" fill="#1A1A2E">Michael Chen</text>
+                        <text x="380" y="290" font-family="Poppins" font-size="10" font-weight="600" fill="#2ECC71">$2,890</text>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature: Compliance -->
+    <section class="py-5 bg-light-soft">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6 order-lg-2 mb-4 mb-lg-0">
+                    <span class="subtitle d-inline-block mb-3" style="background: rgba(255,159,67,0.15); padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.875rem; color: #FF9F43; font-weight: 600;">COMPLIANCE</span>
+                    <h2>Stay Compliant, Automatically</h2>
+                    <p class="lead text-muted">Never miss a certification expiration or labor law violation with proactive compliance monitoring and alerts.</p>
+                    <ul class="list-unstyled">
+                        <li class="d-flex align-items-start mb-3">
+                            <i class="bi bi-check-circle-fill text-success me-3 mt-1"></i>
+                            <div><strong>Certification tracking</strong> - Monitor licenses, certifications, and training requirements</div>
+                        </li>
+                        <li class="d-flex align-items-start mb-3">
+                            <i class="bi bi-check-circle-fill text-success me-3 mt-1"></i>
+                            <div><strong>Labor law compliance</strong> - Automatic enforcement of break rules, overtime limits, and more</div>
+                        </li>
+                        <li class="d-flex align-items-start mb-3">
+                            <i class="bi bi-check-circle-fill text-success me-3 mt-1"></i>
+                            <div><strong>Audit trails</strong> - Complete history of all schedule changes and time edits</div>
+                        </li>
+                        <li class="d-flex align-items-start mb-3">
+                            <i class="bi bi-check-circle-fill text-success me-3 mt-1"></i>
+                            <div><strong>Expiration alerts</strong> - Get notified before credentials expire</div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <svg viewBox="0 0 500 350" fill="none" class="img-fluid rounded-xl shadow-lg">
+                        <rect width="500" height="350" rx="16" fill="white"/>
+                        <rect x="30" y="30" width="440" height="60" rx="10" fill="#FFF3CD" stroke="#FFE69C" stroke-width="2"/>
+                        <circle cx="65" cy="60" r="20" fill="#FF9F43"/>
+                        <path d="M65 50V65M65 70V72" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                        <text x="100" y="55" font-family="Poppins" font-size="12" font-weight="600" fill="#856404">2 Certifications Expiring Soon</text>
+                        <text x="100" y="72" font-family="Poppins" font-size="10" fill="#856404">Action required within 30 days</text>
+                        <rect x="30" y="110" width="210" height="100" rx="10" fill="#D4EDDA" stroke="#C3E6CB" stroke-width="2"/>
+                        <text x="50" y="140" font-family="Poppins" font-size="11" font-weight="600" fill="#155724">Break Compliance</text>
+                        <text x="50" y="170" font-family="Poppins" font-size="24" font-weight="700" fill="#155724">98%</text>
+                        <text x="50" y="190" font-family="Poppins" font-size="10" fill="#155724">All breaks taken on time</text>
+                        <rect x="260" y="110" width="210" height="100" rx="10" fill="#D1ECF1" stroke="#BEE5EB" stroke-width="2"/>
+                        <text x="280" y="140" font-family="Poppins" font-size="11" font-weight="600" fill="#0C5460">Overtime Status</text>
+                        <text x="280" y="170" font-family="Poppins" font-size="24" font-weight="700" fill="#0C5460">4.2 hrs</text>
+                        <text x="280" y="190" font-family="Poppins" font-size="10" fill="#0C5460">Avg weekly overtime</text>
+                        <rect x="30" y="230" width="440" height="90" rx="10" fill="#F8F9FA"/>
+                        <text x="50" y="260" font-family="Poppins" font-size="12" font-weight="600" fill="#1A1A2E">Compliance Score</text>
+                        <rect x="50" y="280" width="400" height="20" rx="10" fill="#E9ECEF"/>
+                        <rect x="50" y="280" width="380" height="20" rx="10" fill="#2ECC71"/>
+                        <text x="430" y="295" font-family="Poppins" font-size="11" font-weight="600" fill="white">95%</text>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- More Features Grid -->
+    <section class="py-5">
+        <div class="container py-5">
+            <div class="section-title">
+                <span class="subtitle">And More</span>
+                <h2>Additional Features</h2>
+                <p>Everything else you need for complete workforce management</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card animate-on-scroll">
+                        <div class="feature-icon icon-pink"><i class="bi bi-graph-up-arrow"></i></div>
+                        <h4>Analytics & Reports</h4>
+                        <p>Real-time dashboards and custom reports for labor costs, productivity, and workforce trends.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card animate-on-scroll delay-1">
+                        <div class="feature-icon icon-teal"><i class="bi bi-phone"></i></div>
+                        <h4>Mobile App</h4>
+                        <p>Full-featured iOS and Android apps for managers and employees on the go.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card animate-on-scroll delay-2">
+                        <div class="feature-icon icon-purple"><i class="bi bi-people"></i></div>
+                        <h4>Employee Self-Service</h4>
+                        <p>Let employees manage their own schedules, time-off requests, and profile information.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card animate-on-scroll">
+                        <div class="feature-icon icon-blue"><i class="bi bi-arrows-collapse"></i></div>
+                        <h4>Shift Swapping</h4>
+                        <p>Enable employees to swap shifts with approval workflows and automatic notifications.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card animate-on-scroll delay-1">
+                        <div class="feature-icon icon-green"><i class="bi bi-calendar-x"></i></div>
+                        <h4>Time-Off Management</h4>
+                        <p>Track PTO, sick leave, and vacation with automated accrual and approval workflows.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card animate-on-scroll delay-2">
+                        <div class="feature-icon icon-orange"><i class="bi bi-bell"></i></div>
+                        <h4>Notifications</h4>
+                        <p>Keep everyone informed with push notifications, SMS, and email alerts.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>See StaffShell in Action</h2>
+                <p>Schedule a personalized demo and see how StaffShell can transform your workforce management.</p>
+                <div class="d-flex flex-wrap justify-content-center gap-3">
+                    <a href="#" class="btn btn-lg" style="background: white; color: var(--ss-primary);">Book a Demo</a>
+                    <a href="pricing.html" class="btn btn-outline-white btn-lg">View Pricing</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <a class="navbar-brand mb-3 d-inline-block" href="index.html" style="color: white;">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <rect width="40" height="40" rx="10" fill="url(#flg)"/>
+                            <path d="M10 15h20M10 20h15M10 25h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+                            <defs><linearGradient id="flg" x1="0" y1="0" x2="40" y2="40"><stop stop-color="#6B5CE7"/><stop offset="1" stop-color="#8B7DF2"/></linearGradient></defs>
+                        </svg>
+                        StaffShell
+                    </a>
+                    <p class="footer-desc">The all-in-one workforce management platform.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#"><i class="bi bi-linkedin"></i></a>
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <h4 class="footer-title">Product</h4>
+                    <ul class="footer-links">
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="#">Integrations</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <h4 class="footer-title">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h4 class="footer-title">Newsletter</h4>
+                    <form class="footer-newsletter-form newsletter-form">
+                        <input type="email" placeholder="Your email" required>
+                        <button type="submit" class="btn btn-primary"><i class="bi bi-send"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p class="footer-copyright">&copy; 2024 StaffShell. All rights reserved.</p>
+                    <div class="footer-legal">
+                        <a href="terms.html">Terms</a>
+                        <a href="privacy.html">Privacy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

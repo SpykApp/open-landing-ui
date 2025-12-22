@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="StaffShell - The all-in-one workforce management platform for staffing, scheduling, payroll, and compliance. Streamline your operations today.">
+    <title>StaffShell - Smart Workforce Management Platform</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%236B5CE7'/%3E%3Cpath d='M8 12h16M8 16h12M8 20h8' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <!-- ============================================
+         HEADER
+         ============================================ -->
+    <header class="site-header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <!-- Logo -->
+                <a class="navbar-brand" href="index.html">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="40" height="40" rx="10" fill="url(#logo-gradient)"/>
+                        <path d="M10 15h20M10 20h15M10 25h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+                        <defs>
+                            <linearGradient id="logo-gradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#6B5CE7"/>
+                                <stop offset="1" stop-color="#8B7DF2"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    StaffShell
+                </a>
+
+                <!-- Mobile Toggle -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvas" aria-controls="navbarOffcanvas" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Navigation -->
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="navbarOffcanvas">
+                    <div class="offcanvas-header">
+                        <a class="navbar-brand" href="index.html">
+                            <svg width="32" height="32" viewBox="0 0 40 40" fill="none">
+                                <rect width="40" height="40" rx="10" fill="url(#logo-gradient-mobile)"/>
+                                <path d="M10 15h20M10 20h15M10 25h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+                                <defs>
+                                    <linearGradient id="logo-gradient-mobile" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#6B5CE7"/>
+                                        <stop offset="1" stop-color="#8B7DF2"/>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                            StaffShell
+                        </a>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav mx-auto">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Product
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="features.html">Features</a></li>
+                                    <li><a class="dropdown-item" href="pricing.html">Pricing</a></li>
+                                    <li><a class="dropdown-item" href="#integrations">Integrations</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Company
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="about.html">About Us</a></li>
+                                    <li><a class="dropdown-item" href="blog.html">Blog</a></li>
+                                    <li><a class="dropdown-item" href="contact.html">Contact</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Pages
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="event.html">Event Landing</a></li>
+                                    <li><a class="dropdown-item" href="blog-single.html">Blog Article</a></li>
+                                    <li><a class="dropdown-item" href="terms.html">Terms of Service</a></li>
+                                    <li><a class="dropdown-item" href="privacy.html">Privacy Policy</a></li>
+                                    <li><a class="dropdown-item" href="404.html">404 Page</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <div class="header-cta d-flex align-items-center gap-3">
+                            <a href="#" class="nav-link d-none d-lg-block">Sign In</a>
+                            <a href="#" class="btn btn-primary">Start Free Trial</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ============================================
+         HERO SECTION
+         ============================================ -->
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="hero-content">
+                        <div class="hero-badge">
+                            <i class="bi bi-star-fill"></i>
+                            <span>Rated #1 Workforce Platform 2024</span>
+                        </div>
+                        <h1 class="display-title">
+                            Workforce Management <span class="text-gradient">Made Simple</span>
+                        </h1>
+                        <p class="lead">
+                            Streamline scheduling, automate payroll, and ensure compliance—all from one powerful platform. Join 5,000+ companies transforming how they manage their workforce.
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="#" class="btn btn-primary btn-lg">
+                                <i class="bi bi-play-circle"></i>
+                                Book a Demo
+                            </a>
+                            <a href="#" class="btn btn-secondary btn-lg">
+                                Start Free Trial
+                            </a>
+                        </div>
+                        <div class="hero-stats">
+                            <div class="hero-stat">
+                                <span class="hero-stat-value counter" data-target="5000">0</span>
+                                <span class="hero-stat-label">Active Companies</span>
+                            </div>
+                            <div class="hero-stat">
+                                <span class="hero-stat-value"><span class="counter" data-target="98">0</span>%</span>
+                                <span class="hero-stat-label">Customer Satisfaction</span>
+                            </div>
+                            <div class="hero-stat">
+                                <span class="hero-stat-value"><span class="counter" data-target="35">0</span>%</span>
+                                <span class="hero-stat-label">Time Saved</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-image">
+                        <div class="hero-image-wrapper">
+                            <!-- Placeholder for dashboard image -->
+                            <svg viewBox="0 0 600 450" fill="none" xmlns="http://www.w3.org/2000/svg" class="img-fluid">
+                                <rect width="600" height="450" rx="16" fill="#F8F9FA"/>
+                                <!-- Sidebar -->
+                                <rect x="0" y="0" width="180" height="450" rx="16" fill="#1A1A2E"/>
+                                <circle cx="50" cy="40" r="16" fill="#6B5CE7"/>
+                                <rect x="76" y="32" width="80" height="8" rx="4" fill="#4A4A6A"/>
+                                <rect x="76" y="44" width="50" height="6" rx="3" fill="#3A3A5A"/>
+                                <rect x="24" y="90" width="132" height="36" rx="8" fill="#6B5CE7"/>
+                                <rect x="24" y="140" width="132" height="36" rx="8" fill="#2D2D44"/>
+                                <rect x="24" y="190" width="132" height="36" rx="8" fill="#2D2D44"/>
+                                <rect x="24" y="240" width="132" height="36" rx="8" fill="#2D2D44"/>
+                                <!-- Main Content -->
+                                <rect x="200" y="20" width="380" height="60" rx="12" fill="white" stroke="#E9ECEF" stroke-width="2"/>
+                                <rect x="220" y="40" width="120" height="20" rx="6" fill="#E9ECEF"/>
+                                <circle cx="540" cy="50" r="16" fill="#6B5CE7" opacity="0.2"/>
+                                <!-- Cards -->
+                                <rect x="200" y="100" width="180" height="100" rx="12" fill="white" stroke="#E9ECEF" stroke-width="2"/>
+                                <rect x="220" y="120" width="60" height="8" rx="4" fill="#6B5CE7"/>
+                                <rect x="220" y="140" width="100" height="24" rx="6" fill="#1A1A2E"/>
+                                <rect x="220" y="175" width="80" height="6" rx="3" fill="#2ECC71"/>
+                                <rect x="400" y="100" width="180" height="100" rx="12" fill="white" stroke="#E9ECEF" stroke-width="2"/>
+                                <rect x="420" y="120" width="60" height="8" rx="4" fill="#FF6B6B"/>
+                                <rect x="420" y="140" width="100" height="24" rx="6" fill="#1A1A2E"/>
+                                <rect x="420" y="175" width="80" height="6" rx="3" fill="#4A90E2"/>
+                                <!-- Chart -->
+                                <rect x="200" y="220" width="380" height="210" rx="12" fill="white" stroke="#E9ECEF" stroke-width="2"/>
+                                <rect x="220" y="240" width="80" height="8" rx="4" fill="#1A1A2E"/>
+                                <path d="M240 380 L300 340 L360 360 L420 300 L480 320 L540 280" stroke="#6B5CE7" stroke-width="3" stroke-linecap="round" fill="none"/>
+                                <path d="M240 380 L300 340 L360 360 L420 300 L480 320 L540 280 L540 400 L240 400 Z" fill="url(#chart-gradient)" opacity="0.2"/>
+                                <defs>
+                                    <linearGradient id="chart-gradient" x1="390" y1="280" x2="390" y2="400" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#6B5CE7"/>
+                                        <stop offset="1" stop-color="#6B5CE7" stop-opacity="0"/>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                            <!-- Floating Cards -->
+                            <div class="hero-floating-card card-1">
+                                <div class="icon bg-success-soft">
+                                    <i class="bi bi-check-circle-fill"></i>
+                                </div>
+                                <div class="text">
+                                    <strong>Payroll Processed</strong>
+                                    <span class="text-muted">$42,500 this week</span>
+                                </div>
+                            </div>
+                            <div class="hero-floating-card card-2">
+                                <div class="icon bg-primary-soft">
+                                    <i class="bi bi-people-fill"></i>
+                                </div>
+                                <div class="text">
+                                    <strong>128 Employees</strong>
+                                    <span class="text-muted">Active today</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         LOGO STRIP / SOCIAL PROOF
+         ============================================ -->
+    <section class="logo-strip">
+        <div class="container">
+            <p class="logo-strip-title">Trusted by leading companies worldwide</p>
+            <div class="logo-strip-items">
+                <!-- Company Logo Placeholders -->
+                <div class="logo-strip-item">
+                    <svg width="120" height="32" viewBox="0 0 120 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="32" height="32" rx="6" fill="#1A1A2E"/>
+                        <path d="M16 8L24 24H8L16 8Z" fill="#6B5CE7"/>
+                        <text x="40" y="22" font-family="Poppins, sans-serif" font-size="14" font-weight="600" fill="#1A1A2E">Acme Inc</text>
+                    </svg>
+                </div>
+                <div class="logo-strip-item">
+                    <svg width="120" height="32" viewBox="0 0 120 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="16" cy="16" r="14" stroke="#1A1A2E" stroke-width="3"/>
+                        <circle cx="16" cy="16" r="6" fill="#FF6B6B"/>
+                        <text x="40" y="22" font-family="Poppins, sans-serif" font-size="14" font-weight="600" fill="#1A1A2E">Globex</text>
+                    </svg>
+                </div>
+                <div class="logo-strip-item">
+                    <svg width="120" height="32" viewBox="0 0 120 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="2" y="2" width="28" height="28" rx="4" fill="#4A90E2"/>
+                        <rect x="8" y="8" width="8" height="8" fill="white"/>
+                        <rect x="16" y="16" width="8" height="8" fill="white"/>
+                        <text x="40" y="22" font-family="Poppins, sans-serif" font-size="14" font-weight="600" fill="#1A1A2E">TechFlow</text>
+                    </svg>
+                </div>
+                <div class="logo-strip-item">
+                    <svg width="120" height="32" viewBox="0 0 120 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16 4L28 28H4L16 4Z" fill="#2ECC71"/>
+                        <text x="40" y="22" font-family="Poppins, sans-serif" font-size="14" font-weight="600" fill="#1A1A2E">Initech</text>
+                    </svg>
+                </div>
+                <div class="logo-strip-item">
+                    <svg width="130" height="32" viewBox="0 0 130 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="32" height="32" rx="16" fill="#F1C40F"/>
+                        <path d="M16 8V24M8 16H24" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                        <text x="40" y="22" font-family="Poppins, sans-serif" font-size="14" font-weight="600" fill="#1A1A2E">Massive</text>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FEATURES SECTION
+         ============================================ -->
+    <section class="features bg-light-soft" id="features">
+        <div class="container">
+            <div class="section-title">
+                <span class="subtitle">Features</span>
+                <h2>Everything You Need to Manage Your Workforce</h2>
+                <p>Powerful tools designed to simplify every aspect of workforce management, from scheduling to payroll and beyond.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card animate-on-scroll">
+                        <div class="feature-icon icon-purple">
+                            <i class="bi bi-calendar-check"></i>
+                        </div>
+                        <h4>Smart Scheduling</h4>
+                        <p>AI-powered scheduling that optimizes shifts based on availability, skills, and labor laws. Reduce scheduling conflicts by 90%.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card animate-on-scroll delay-1">
+                        <div class="feature-icon icon-blue">
+                            <i class="bi bi-clock-history"></i>
+                        </div>
+                        <h4>Time Tracking</h4>
+                        <p>Accurate time tracking with GPS verification, biometric options, and seamless mobile clock-in. No more buddy punching.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card animate-on-scroll delay-2">
+                        <div class="feature-icon icon-green">
+                            <i class="bi bi-cash-stack"></i>
+                        </div>
+                        <h4>Automated Payroll</h4>
+                        <p>Process payroll in minutes with automatic tax calculations, direct deposits, and compliance with local regulations.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card animate-on-scroll delay-1">
+                        <div class="feature-icon icon-orange">
+                            <i class="bi bi-shield-check"></i>
+                        </div>
+                        <h4>Compliance Management</h4>
+                        <p>Stay compliant with labor laws, certifications, and training requirements. Get alerts before credentials expire.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card animate-on-scroll delay-2">
+                        <div class="feature-icon icon-pink">
+                            <i class="bi bi-graph-up-arrow"></i>
+                        </div>
+                        <h4>Analytics & Reports</h4>
+                        <p>Real-time insights into labor costs, productivity, and workforce trends. Make data-driven decisions effortlessly.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card animate-on-scroll delay-3">
+                        <div class="feature-icon icon-teal">
+                            <i class="bi bi-phone"></i>
+                        </div>
+                        <h4>Mobile App</h4>
+                        <p>Empower your team with a mobile app for schedules, time-off requests, shift swaps, and instant notifications.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <a href="features.html" class="btn btn-outline-primary">View All Features <i class="bi bi-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         HOW IT WORKS
+         ============================================ -->
+    <section class="steps-section bg-pattern" id="how-it-works">
+        <div class="container">
+            <div class="section-title">
+                <span class="subtitle">How It Works</span>
+                <h2>Get Started in 3 Simple Steps</h2>
+                <p>Setting up StaffShell takes just minutes. Here's how easy it is to transform your workforce management.</p>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="step-item animate-on-scroll">
+                        <div class="step-number">1</div>
+                        <div class="step-connector"></div>
+                        <h4>Create Your Account</h4>
+                        <p>Sign up in seconds and import your employee data from spreadsheets or existing systems.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="step-item animate-on-scroll delay-1">
+                        <div class="step-number">2</div>
+                        <div class="step-connector"></div>
+                        <h4>Configure Your Settings</h4>
+                        <p>Set up pay rules, shift templates, and compliance requirements tailored to your business.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="step-item animate-on-scroll delay-2">
+                        <div class="step-number">3</div>
+                        <h4>Start Managing</h4>
+                        <p>Begin scheduling, tracking time, and processing payroll—all from one intuitive dashboard.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         INTEGRATIONS
+         ============================================ -->
+    <section class="integrations" id="integrations">
+        <div class="container">
+            <div class="section-title">
+                <span class="subtitle">Integrations</span>
+                <h2>Connects With Your Favorite Tools</h2>
+                <p>StaffShell integrates seamlessly with the tools you already use, ensuring a smooth workflow.</p>
+            </div>
+            <div class="integration-grid animate-on-scroll">
+                <!-- Integration Icons -->
+                <div class="integration-item" title="Slack">
+                    <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18.5 10C18.5 7.5 16.5 5.5 14 5.5C11.5 5.5 9.5 7.5 9.5 10C9.5 12.5 11.5 14.5 14 14.5H18.5V10Z" fill="#E01E5A"/>
+                        <path d="M20 10C20 12.5 22 14.5 24.5 14.5C27 14.5 29 12.5 29 10V5.5H24.5C22 5.5 20 7.5 20 10Z" fill="#36C5F0"/>
+                        <path d="M24.5 20C22 20 20 22 20 24.5C20 27 22 29 24.5 29H29V24.5C29 22 27 20 24.5 20Z" fill="#2EB67D"/>
+                        <path d="M10 24.5C10 22 12 20 14.5 20C17 20 19 22 19 24.5V29H14.5C12 29 10 27 10 24.5Z" fill="#ECB22E"/>
+                        <path d="M14.5 38.5C17 38.5 19 36.5 19 34C19 31.5 17 29.5 14.5 29.5H10V34C10 36.5 12 38.5 14.5 38.5Z" fill="#E01E5A"/>
+                        <path d="M24.5 29.5C22 29.5 20 31.5 20 34V38.5H24.5C27 38.5 29 36.5 29 34C29 31.5 27 29.5 24.5 29.5Z" fill="#36C5F0"/>
+                        <path d="M38.5 34C38.5 36.5 36.5 38.5 34 38.5C31.5 38.5 29.5 36.5 29.5 34V29.5H34C36.5 29.5 38.5 31.5 38.5 34Z" fill="#2EB67D"/>
+                        <path d="M34 20C31.5 20 29.5 22 29.5 24.5C29.5 27 31.5 29 34 29H38.5V24.5C38.5 22 36.5 20 34 20Z" fill="#ECB22E"/>
+                    </svg>
+                </div>
+                <div class="integration-item" title="Google Workspace">
+                    <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M43.6 20.1H42V20H24V28H35.3C33.7 32.4 29.2 35.5 24 35.5C17.4 35.5 12 30.1 12 23.5C12 16.9 17.4 11.5 24 11.5C27.1 11.5 29.9 12.7 32 14.6L37.7 8.9C34.1 5.5 29.3 3.5 24 3.5C13 3.5 4 12.5 4 23.5C4 34.5 13 43.5 24 43.5C35 43.5 44 34.5 44 23.5C44 22.3 43.9 21.2 43.6 20.1Z" fill="#FFC107"/>
+                        <path d="M6.3 14.1L12.9 18.9C14.6 14.8 18.9 11.9 24 11.9C27.1 11.9 29.9 13.1 32 15L37.7 9.3C34.1 5.9 29.3 3.9 24 3.9C16.3 3.9 9.7 8.1 6.3 14.1Z" fill="#FF3D00"/>
+                        <path d="M24 44C29.2 44 33.9 42.1 37.5 38.9L31.3 33.5C29.3 35 26.8 35.9 24 35.9C18.9 35.9 14.4 32.9 12.7 28.5L6.1 33.5C9.5 39.7 16.2 44 24 44Z" fill="#4CAF50"/>
+                        <path d="M43.6 20.1H42V20H24V28H35.3C34.5 30.1 33.2 31.9 31.3 33.2L37.5 38.6C37.1 39 44 34 44 23.5C44 22.3 43.9 21.2 43.6 20.1Z" fill="#1976D2"/>
+                    </svg>
+                </div>
+                <div class="integration-item" title="Microsoft 365">
+                    <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="6" y="6" width="17" height="17" fill="#F25022"/>
+                        <rect x="25" y="6" width="17" height="17" fill="#7FBA00"/>
+                        <rect x="6" y="25" width="17" height="17" fill="#00A4EF"/>
+                        <rect x="25" y="25" width="17" height="17" fill="#FFB900"/>
+                    </svg>
+                </div>
+                <div class="integration-item" title="Quickbooks">
+                    <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="24" cy="24" r="20" fill="#2CA01C"/>
+                        <path d="M18 18V30H21V21H24C26.8 21 29 23.2 29 26C29 28.8 26.8 31 24 31H21V34H24C28.4 34 32 30.4 32 26C32 21.6 28.4 18 24 18H18Z" fill="white"/>
+                        <path d="M27 30V18H24V27H21C18.2 27 16 24.8 16 22C16 19.2 18.2 17 21 17H24V14H21C16.6 14 13 17.6 13 22C13 26.4 16.6 30 21 30H27Z" fill="white"/>
+                    </svg>
+                </div>
+                <div class="integration-item" title="Zoom">
+                    <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="4" y="10" width="40" height="28" rx="8" fill="#2D8CFF"/>
+                        <path d="M32 24L40 18V30L32 24Z" fill="white"/>
+                        <rect x="8" y="16" width="22" height="16" rx="3" fill="white"/>
+                    </svg>
+                </div>
+                <div class="integration-item" title="Salesforce">
+                    <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <ellipse cx="24" cy="26" rx="18" ry="14" fill="#00A1E0"/>
+                        <ellipse cx="14" cy="22" rx="8" ry="8" fill="#00A1E0"/>
+                        <ellipse cx="34" cy="22" rx="8" ry="8" fill="#00A1E0"/>
+                        <ellipse cx="24" cy="16" rx="10" ry="8" fill="#00A1E0"/>
+                    </svg>
+                </div>
+                <div class="integration-item" title="ADP">
+                    <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="48" height="48" rx="8" fill="#D32F2F"/>
+                        <text x="8" y="32" font-family="Arial Black" font-size="20" font-weight="900" fill="white">ADP</text>
+                    </svg>
+                </div>
+                <div class="integration-item" title="Zapier">
+                    <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M28 4H20V18L8 10L4 16L16 24L4 32L8 38L20 30V44H28V30L40 38L44 32L32 24L44 16L40 10L28 18V4Z" fill="#FF4A00"/>
+                    </svg>
+                </div>
+            </div>
+            <p class="text-center mt-4 text-white-50">And 50+ more integrations available</p>
+        </div>
+    </section>
+
+    <!-- ============================================
+         TESTIMONIALS
+         ============================================ -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <span class="subtitle">Testimonials</span>
+                <h2>What Our Customers Say</h2>
+                <p>Join thousands of satisfied customers who have transformed their workforce management with StaffShell.</p>
+            </div>
+            <div class="testimonial-slider">
+                <div class="testimonial-track">
+                    <div class="testimonial-card">
+                        <div class="testimonial-card-inner">
+                            <div class="testimonial-rating">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                            <p class="testimonial-text">"StaffShell has completely transformed how we manage our 200+ employees. Scheduling that used to take hours now takes minutes. The ROI was immediate."</p>
+                            <div class="testimonial-author">
+                                <div class="testimonial-avatar" style="background: linear-gradient(135deg, #6B5CE7, #8B7DF2); display: flex; align-items: center; justify-content: center; color: white; font-weight: 600;">SM</div>
+                                <div class="testimonial-info">
+                                    <h5>Sarah Mitchell</h5>
+                                    <p>HR Director, TechCorp Solutions</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-card-inner">
+                            <div class="testimonial-rating">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                            <p class="testimonial-text">"The compliance features alone are worth the investment. We've avoided multiple potential violations and the peace of mind is invaluable."</p>
+                            <div class="testimonial-author">
+                                <div class="testimonial-avatar" style="background: linear-gradient(135deg, #FF6B6B, #FF8585); display: flex; align-items: center; justify-content: center; color: white; font-weight: 600;">MR</div>
+                                <div class="testimonial-info">
+                                    <h5>Michael Rodriguez</h5>
+                                    <p>Operations Manager, HealthFirst Clinic</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-card-inner">
+                            <div class="testimonial-rating">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                            <p class="testimonial-text">"Our employees love the mobile app. Shift swaps, time-off requests, and schedule viewing are all so easy. It's reduced our admin overhead significantly."</p>
+                            <div class="testimonial-author">
+                                <div class="testimonial-avatar" style="background: linear-gradient(135deg, #4A90E2, #6BA8EE); display: flex; align-items: center; justify-content: center; color: white; font-weight: 600;">EW</div>
+                                <div class="testimonial-info">
+                                    <h5>Emily Watson</h5>
+                                    <p>General Manager, Urban Eats Restaurant</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-card-inner">
+                            <div class="testimonial-rating">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-half"></i>
+                            </div>
+                            <p class="testimonial-text">"Switching to StaffShell cut our payroll processing time by 75%. The automatic calculations and tax compliance have eliminated errors entirely."</p>
+                            <div class="testimonial-author">
+                                <div class="testimonial-avatar" style="background: linear-gradient(135deg, #2ECC71, #58D68D); display: flex; align-items: center; justify-content: center; color: white; font-weight: 600;">DK</div>
+                                <div class="testimonial-info">
+                                    <h5>David Kim</h5>
+                                    <p>CFO, Premier Staffing Agency</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-card-inner">
+                            <div class="testimonial-rating">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                            <p class="testimonial-text">"The analytics dashboard gives us insights we never had before. We've optimized our labor costs and improved employee satisfaction scores."</p>
+                            <div class="testimonial-author">
+                                <div class="testimonial-avatar" style="background: linear-gradient(135deg, #F1C40F, #F4D03F); display: flex; align-items: center; justify-content: center; color: white; font-weight: 600;">LP</div>
+                                <div class="testimonial-info">
+                                    <h5>Lisa Patel</h5>
+                                    <p>VP of People, CloudNine Software</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-card-inner">
+                            <div class="testimonial-rating">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                            <p class="testimonial-text">"Implementation was seamless. The support team helped us migrate from our old system in just two weeks. Best decision we've made this year."</p>
+                            <div class="testimonial-author">
+                                <div class="testimonial-avatar" style="background: linear-gradient(135deg, #9B59B6, #BB8FCE); display: flex; align-items: center; justify-content: center; color: white; font-weight: 600;">JT</div>
+                                <div class="testimonial-info">
+                                    <h5>James Thompson</h5>
+                                    <p>Owner, Thompson Security Services</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-nav">
+                    <button class="testimonial-nav-btn testimonial-prev" aria-label="Previous testimonial">
+                        <i class="bi bi-chevron-left"></i>
+                    </button>
+                    <button class="testimonial-nav-btn testimonial-next" aria-label="Next testimonial">
+                        <i class="bi bi-chevron-right"></i>
+                    </button>
+                </div>
+                <div class="testimonial-dots"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         PRICING SECTION
+         ============================================ -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-title">
+                <span class="subtitle">Pricing</span>
+                <h2>Simple, Transparent Pricing</h2>
+                <p>Choose the plan that fits your business. All plans include a 14-day free trial with no credit card required.</p>
+            </div>
+            <div class="pricing-toggle">
+                <span class="pricing-toggle-label active" data-period="monthly">Monthly</span>
+                <div class="pricing-toggle-switch"></div>
+                <span class="pricing-toggle-label" data-period="yearly">Yearly</span>
+                <span class="pricing-save">Save 20%</span>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-4 col-md-6">
+                    <div class="pricing-card animate-on-scroll">
+                        <span class="pricing-plan">Starter</span>
+                        <h3>For Small Teams</h3>
+                        <div class="pricing-price">
+                            <span class="pricing-amount price-monthly"><sup>$</sup>29</span>
+                            <span class="pricing-amount price-yearly" style="display: none;"><sup>$</sup>23</span>
+                            <span class="pricing-period">per user / month</span>
+                        </div>
+                        <p class="pricing-desc">Perfect for small businesses just getting started with workforce management.</p>
+                        <ul class="pricing-features">
+                            <li><i class="bi bi-check-circle-fill"></i> Up to 25 employees</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Basic scheduling</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Time tracking</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Mobile app access</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Email support</li>
+                            <li class="disabled"><i class="bi bi-x-circle"></i> Payroll processing</li>
+                            <li class="disabled"><i class="bi bi-x-circle"></i> Advanced analytics</li>
+                        </ul>
+                        <a href="#" class="btn btn-outline-primary">Start Free Trial</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="pricing-card popular animate-on-scroll delay-1">
+                        <span class="pricing-badge">Most Popular</span>
+                        <span class="pricing-plan">Professional</span>
+                        <h3>For Growing Teams</h3>
+                        <div class="pricing-price">
+                            <span class="pricing-amount price-monthly"><sup>$</sup>59</span>
+                            <span class="pricing-amount price-yearly" style="display: none;"><sup>$</sup>47</span>
+                            <span class="pricing-period">per user / month</span>
+                        </div>
+                        <p class="pricing-desc">Everything you need to manage and scale your growing workforce.</p>
+                        <ul class="pricing-features">
+                            <li><i class="bi bi-check-circle-fill"></i> Up to 100 employees</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Advanced scheduling</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Time tracking + GPS</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Payroll processing</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Compliance alerts</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Analytics dashboard</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Priority support</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">Start Free Trial</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="pricing-card animate-on-scroll delay-2">
+                        <span class="pricing-plan">Enterprise</span>
+                        <h3>For Large Organizations</h3>
+                        <div class="pricing-price">
+                            <span class="pricing-amount">Custom</span>
+                            <span class="pricing-period">tailored to your needs</span>
+                        </div>
+                        <p class="pricing-desc">Custom solutions for enterprise-level workforce management needs.</p>
+                        <ul class="pricing-features">
+                            <li><i class="bi bi-check-circle-fill"></i> Unlimited employees</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Custom integrations</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Advanced security</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Dedicated success manager</li>
+                            <li><i class="bi bi-check-circle-fill"></i> Custom reporting</li>
+                            <li><i class="bi bi-check-circle-fill"></i> SLA guarantee</li>
+                            <li><i class="bi bi-check-circle-fill"></i> On-site training</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-dark">Contact Sales</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FAQ SECTION
+         ============================================ -->
+    <section class="faq bg-light-soft" id="faq">
+        <div class="container">
+            <div class="section-title">
+                <span class="subtitle">FAQ</span>
+                <h2>Frequently Asked Questions</h2>
+                <p>Find answers to common questions about StaffShell. Can't find what you're looking for? Contact our support team.</p>
+            </div>
+            <div class="faq-grid">
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item animate-on-scroll">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+                                How long does it take to set up StaffShell?
+                            </button>
+                        </h2>
+                        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Most businesses are up and running within a day. You can import existing employee data via CSV or connect to your current HR system. Our onboarding team provides personalized setup assistance to ensure a smooth transition.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item animate-on-scroll delay-1">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                                Is my data secure with StaffShell?
+                            </button>
+                        </h2>
+                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Absolutely. We use bank-level 256-bit SSL encryption, SOC 2 Type II certified data centers, and regular security audits. Your data is backed up daily and we offer two-factor authentication for all accounts.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item animate-on-scroll delay-2">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                                Can I integrate StaffShell with my existing payroll provider?
+                            </button>
+                        </h2>
+                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Yes! StaffShell integrates with major payroll providers including ADP, Paychex, Gusto, and QuickBooks. You can also use our built-in payroll processing or export data in various formats for manual import.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item animate-on-scroll delay-3">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+                                What happens after the free trial ends?
+                            </button>
+                        </h2>
+                        <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                After your 14-day trial, you'll be prompted to choose a plan. Your data is preserved for 30 days if you need more time to decide. No credit card is required during the trial, so you won't be automatically charged.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item animate-on-scroll delay-4">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5">
+                                Do you offer training for my team?
+                            </button>
+                        </h2>
+                        <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Yes, we offer comprehensive training resources including video tutorials, documentation, and live webinars. Professional and Enterprise plans include dedicated onboarding sessions, and Enterprise customers receive on-site training options.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item animate-on-scroll delay-5">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6" aria-expanded="false" aria-controls="faq6">
+                                Can employees access StaffShell on their phones?
+                            </button>
+                        </h2>
+                        <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Yes! Our mobile app is available for iOS and Android. Employees can view schedules, clock in/out, request time off, swap shifts, and receive notifications—all from their smartphones.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         BLOG PREVIEW
+         ============================================ -->
+    <section class="blog-preview" id="blog">
+        <div class="container">
+            <div class="section-title">
+                <span class="subtitle">Blog</span>
+                <h2>Latest from Our Blog</h2>
+                <p>Stay updated with workforce management tips, industry news, and product updates.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <article class="blog-card animate-on-scroll">
+                        <div class="blog-card-image">
+                            <svg viewBox="0 0 400 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="400" height="220" fill="#F0F2F5"/>
+                                <rect x="40" y="40" width="320" height="140" rx="8" fill="#E9ECEF"/>
+                                <circle cx="200" cy="110" r="40" fill="#6B5CE7" opacity="0.3"/>
+                                <path d="M180 110L195 120L220 95" stroke="#6B5CE7" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span class="blog-card-category">Scheduling</span>
+                        </div>
+                        <div class="blog-card-body">
+                            <div class="blog-card-meta">
+                                <span><i class="bi bi-calendar3"></i> Nov 15, 2024</span>
+                                <span><i class="bi bi-clock"></i> 5 min read</span>
+                            </div>
+                            <h4><a href="blog-single.html">10 Strategies to Reduce Employee Scheduling Conflicts</a></h4>
+                            <p>Learn proven techniques to minimize scheduling conflicts and improve team satisfaction.</p>
+                            <a href="blog-single.html" class="blog-card-link">
+                                Read More <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <article class="blog-card animate-on-scroll delay-1">
+                        <div class="blog-card-image">
+                            <svg viewBox="0 0 400 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="400" height="220" fill="#FFF5F5"/>
+                                <rect x="40" y="40" width="320" height="140" rx="8" fill="#FFE5E5"/>
+                                <rect x="80" y="80" width="60" height="60" rx="8" fill="#FF6B6B" opacity="0.5"/>
+                                <rect x="160" y="60" width="60" height="80" rx="8" fill="#FF6B6B" opacity="0.7"/>
+                                <rect x="240" y="100" width="60" height="40" rx="8" fill="#FF6B6B" opacity="0.5"/>
+                            </svg>
+                            <span class="blog-card-category">Compliance</span>
+                        </div>
+                        <div class="blog-card-body">
+                            <div class="blog-card-meta">
+                                <span><i class="bi bi-calendar3"></i> Nov 10, 2024</span>
+                                <span><i class="bi bi-clock"></i> 7 min read</span>
+                            </div>
+                            <h4><a href="blog-single.html">2024 Labor Law Updates Every Employer Should Know</a></h4>
+                            <p>Stay compliant with the latest changes in labor regulations and requirements.</p>
+                            <a href="blog-single.html" class="blog-card-link">
+                                Read More <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <article class="blog-card animate-on-scroll delay-2">
+                        <div class="blog-card-image">
+                            <svg viewBox="0 0 400 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="400" height="220" fill="#F0FFF4"/>
+                                <rect x="40" y="40" width="320" height="140" rx="8" fill="#D4EDDA"/>
+                                <circle cx="140" cy="110" r="30" fill="#2ECC71" opacity="0.5"/>
+                                <circle cx="200" cy="110" r="30" fill="#2ECC71" opacity="0.6"/>
+                                <circle cx="260" cy="110" r="30" fill="#2ECC71" opacity="0.5"/>
+                                <path d="M140 110H260" stroke="#2ECC71" stroke-width="3"/>
+                            </svg>
+                            <span class="blog-card-category">Productivity</span>
+                        </div>
+                        <div class="blog-card-body">
+                            <div class="blog-card-meta">
+                                <span><i class="bi bi-calendar3"></i> Nov 5, 2024</span>
+                                <span><i class="bi bi-clock"></i> 6 min read</span>
+                            </div>
+                            <h4><a href="blog-single.html">How Automation is Transforming HR Operations</a></h4>
+                            <p>Discover how modern HR teams are using automation to save time and reduce errors.</p>
+                            <a href="blog-single.html" class="blog-card-link">
+                                Read More <i class="bi bi-arrow-right"></i>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <a href="blog.html" class="btn btn-outline-primary">View All Articles <i class="bi bi-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         CTA SECTION
+         ============================================ -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Transform Your Workforce Management?</h2>
+                <p>Join 5,000+ companies already using StaffShell to streamline operations, save time, and reduce costs.</p>
+                <div class="cta-buttons">
+                    <a href="#" class="btn btn-lg" style="background: white; color: var(--ss-primary);">
+                        <i class="bi bi-play-circle"></i> Book a Demo
+                    </a>
+                    <a href="#" class="btn btn-outline-white btn-lg">
+                        Start Free Trial
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FOOTER
+         ============================================ -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-brand">
+                        <a class="navbar-brand" href="index.html">
+                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="40" height="40" rx="10" fill="url(#footer-logo-gradient)"/>
+                                <path d="M10 15h20M10 20h15M10 25h10" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+                                <defs>
+                                    <linearGradient id="footer-logo-gradient" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#6B5CE7"/>
+                                        <stop offset="1" stop-color="#8B7DF2"/>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                            StaffShell
+                        </a>
+                    </div>
+                    <p class="footer-desc">The all-in-one workforce management platform that helps businesses streamline scheduling, payroll, and compliance.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 col-6">
+                    <h4 class="footer-title">Product</h4>
+                    <ul class="footer-links">
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="#integrations">Integrations</a></li>
+                        <li><a href="#">API Docs</a></li>
+                        <li><a href="#">Changelog</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 col-6">
+                    <h4 class="footer-title">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Press Kit</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h4 class="footer-title">Stay Updated</h4>
+                    <div class="footer-newsletter">
+                        <p>Subscribe to our newsletter for the latest product updates and industry insights.</p>
+                        <form class="footer-newsletter-form newsletter-form">
+                            <input type="email" placeholder="Enter your email" required>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="bi bi-send"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p class="footer-copyright">&copy; 2024 StaffShell. All rights reserved.</p>
+                    <div class="footer-legal">
+                        <a href="terms.html">Terms of Service</a>
+                        <a href="privacy.html">Privacy Policy</a>
+                        <a href="#">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" aria-label="Back to top">
+        <i class="bi bi-arrow-up"></i>
+    </a>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    
+    <!-- Bootstrap 5.3 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
