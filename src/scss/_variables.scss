@@ -1,0 +1,60 @@
+// ============================================
+// STAFFSHELL — Sass Variables
+// Edit this file to retheme the entire site.
+// ============================================
+
+// ─── Brand Colors ────────────────────────────────────────────────────────────
+$primary:           #6B5CE7 !default;
+$primary-light:     #8B7DF2 !default;
+$primary-dark:      #5044C4 !default;
+$primary-gradient:  linear-gradient(135deg, #{$primary} 0%, #{$primary-light} 100%) !default;
+
+// ─── Secondary & Accents ─────────────────────────────────────────────────────
+$secondary:         #FF6B6B !default;
+$secondary-light:   #FF8585 !default;
+$secondary-dark:    #E55555 !default;
+
+$accent-blue:       #4A90E2 !default;
+$accent-green:      #2ECC71 !default;
+$accent-yellow:     #F1C40F !default;
+$accent-orange:     #FF9F43 !default;
+$accent-pink:       #FD79A8 !default;
+$accent-teal:       #00CEC9 !default;
+
+// ─── Neutrals ────────────────────────────────────────────────────────────────
+$dark:              #1A1A2E !default;
+$dark-soft:         #2D2D44 !default;
+$gray-900:          #212529 !default;
+$gray-800:          #343A40 !default;
+$gray-700:          #495057 !default;
+$gray-600:          #6C757D !default;
+$gray-500:          #ADB5BD !default;
+$gray-400:          #CED4DA !default;
+$gray-300:          #DEE2E6 !default;
+$gray-200:          #E9ECEF !default;
+$gray-100:          #F8F9FA !default;
+$white:             #FFFFFF !default;
+
+// ─── Backgrounds ─────────────────────────────────────────────────────────────
+$bg-light:          #FAFBFC !default;
+$bg-purple-light:   #F5F3FF !default;
+$bg-blue-light:     #EBF5FF !default;
+
+// ─── Typography ──────────────────────────────────────────────────────────────
+$font-primary:      'Poppins', -apple-system, BlinkMacSystemFont, sans-serif !default;
+$font-heading:      'Poppins', -apple-system, BlinkMacSystemFont, sans-serif !default;
+
+// ─── Shadows ─────────────────────────────────────────────────────────────────
+$shadow-sm:         0 2px 8px rgba(0, 0, 0, 0.06) !default;
+$shadow:            0 4px 20px rgba(0, 0, 0, 0.08) !default;
+$shadow-lg:         0 10px 40px rgba(0, 0, 0, 0.12) !default;
+$shadow-xl:         0 20px 60px rgba(0, 0, 0, 0.15) !default;
+$shadow-primary:    0 10px 30px rgba(107, 92, 231, 0.3) !default;
+$shadow-card:       0 5px 25px rgba(0, 0, 0, 0.07) !default;
+$shadow-card-hover: 0 15px 45px rgba(0, 0, 0, 0.12) !default;
+
+// ─── Transitions ─────────────────────────────────────────────────────────────
+$transition-fast:   0.15s ease !default;
+$transition:        0.3s ease !default;
+$transition-slow:   0.5s ease !default;
+$transition-bounce: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !default;

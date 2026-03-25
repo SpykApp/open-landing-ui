@@ -1,0 +1,38 @@
+include ../mixins/_logo
+
+//- activePage: 'home' | 'features' | 'pricing' | 'about' | 'blog' | 'contact'
+header.site-header
+  nav.navbar.navbar-expand-lg
+    .container
+      a.navbar-brand(href='index.html')
+        +logo(40, 40, 'nav-logo-grad')
+        | SpykApps
+
+      button.navbar-toggler(type='button' data-bs-toggle='offcanvas' data-bs-target='#navbarOffcanvas' aria-controls='navbarOffcanvas' aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+
+      .offcanvas.offcanvas-end(tabindex='-1' id='navbarOffcanvas')
+        .offcanvas-header
+          a.navbar-brand(href='index.html')
+            +logo(32, 32, 'nav-logo-grad-mobile')
+            | SpykApps
+          button.btn-close(type='button' data-bs-dismiss='offcanvas' aria-label='Close')
+
+        .offcanvas-body
+          ul.navbar-nav.mx-auto
+            li.nav-item
+              a(class=`nav-link${activePage === 'home' ? ' active' : ''}` href='index.html') Home
+            li.nav-item
+              a(class=`nav-link${activePage === 'features' ? ' active' : ''}` href='features.html') Features
+            li.nav-item
+              a(class=`nav-link${activePage === 'pricing' ? ' active' : ''}` href='pricing.html') Pricing
+            li.nav-item
+              a(class=`nav-link${activePage === 'about' ? ' active' : ''}` href='about.html') About
+            li.nav-item
+              a(class=`nav-link${activePage === 'blog' ? ' active' : ''}` href='blog.html') Blog
+            li.nav-item
+              a(class=`nav-link${activePage === 'contact' ? ' active' : ''}` href='contact.html') Contact
+
+          .header-cta.d-flex.align-items-center.gap-3
+            a.nav-link.d-none.d-lg-block(href='#') Sign In
+            a.btn.btn-primary(href='#') Start Free Trial

@@ -1,0 +1,58 @@
+include ../mixins/_logo
+
+footer.site-footer
+  .container
+    .row.g-4
+      .col-lg-4.col-md-6
+        .footer-brand
+          a.navbar-brand(href='index.html')
+            +logo(40, 40, 'footer-logo-grad')
+            | SpykApps
+        p.footer-desc The all-in-one workforce management platform that helps businesses streamline scheduling, payroll, and compliance.
+        .footer-social
+          a(href='#' aria-label='Twitter')
+            i.bi.bi-twitter-x
+          a(href='#' aria-label='LinkedIn')
+            i.bi.bi-linkedin
+          a(href='#' aria-label='Facebook')
+            i.bi.bi-facebook
+          a(href='#' aria-label='Instagram')
+            i.bi.bi-instagram
+
+      .col-lg-2.col-md-6.col-6
+        h4.footer-title Product
+        ul.footer-links
+          li: a(href='features.html') Features
+          li: a(href='pricing.html') Pricing
+          li: a(href='#') Integrations
+          li: a(href='#') API Docs
+          li: a(href='#') Changelog
+
+      .col-lg-2.col-md-6.col-6
+        h4.footer-title Company
+        ul.footer-links
+          li: a(href='about.html') About Us
+          li: a(href='blog.html') Blog
+          li: a(href='#') Careers
+          li: a(href='contact.html') Contact
+          li: a(href='#') Press Kit
+
+      .col-lg-4.col-md-6
+        h4.footer-title Stay Updated
+        .footer-newsletter
+          p Subscribe to our newsletter for the latest product updates and industry insights.
+          form.footer-newsletter-form.newsletter-form
+            input(type='email' placeholder='Enter your email' required)
+            button.btn.btn-primary(type='submit')
+              i.bi.bi-send
+
+    .footer-bottom
+      .footer-bottom-content
+        p.footer-copyright &copy; 2025 SpykApps. All rights reserved.
+        .footer-legal
+          a(href='terms.html') Terms of Service
+          a(href='privacy.html') Privacy Policy
+          a(href='#') Cookie Policy
+
+a.back-to-top(href='#' aria-label='Back to top')
+  i.bi.bi-arrow-up

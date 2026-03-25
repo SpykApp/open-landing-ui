@@ -1,0 +1,181 @@
+extends layouts/base
+
+block vars
+  - activePage = 'features'
+  - pageTitle = 'Features'
+  - pageDescription = 'SpykApps features - Discover powerful tools for scheduling, time tracking, payroll, compliance, and more.'
+
+block content
+  section.page-header
+    .container
+      h1 Powerful Features for Modern Workforce Management
+      p.lead Everything you need to manage scheduling, time tracking, payroll, and compliance in one platform.
+      nav(aria-label='breadcrumb')
+        ol.breadcrumb
+          li.breadcrumb-item: a(href='index.html') Home
+          li.breadcrumb-item.active Features
+
+  //- Feature: Scheduling
+  section.py-5
+    .container.py-5
+      .row.align-items-center
+        .col-lg-6.mb-4.mb-lg-0
+          span.subtitle.d-inline-block.mb-3(style='background: var(--ss-bg-purple-light); padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.875rem; color: var(--ss-primary); font-weight: 600;') SCHEDULING
+          h2 Smart Scheduling That Works for Everyone
+          p.lead.text-muted AI-powered scheduling that considers employee preferences, skills, certifications, and labor laws to create optimal schedules in minutes.
+          ul.list-unstyled
+            li.d-flex.align-items-start.mb-3
+              i.bi.bi-check-circle-fill.text-success.me-3.mt-1
+              div: strong Drag-and-drop interface
+                |  - Build schedules visually with an intuitive calendar view
+            li.d-flex.align-items-start.mb-3
+              i.bi.bi-check-circle-fill.text-success.me-3.mt-1
+              div: strong Auto-scheduling
+                |  - Let AI create optimized schedules based on your rules
+            li.d-flex.align-items-start.mb-3
+              i.bi.bi-check-circle-fill.text-success.me-3.mt-1
+              div: strong Shift templates
+                |  - Save and reuse common schedule patterns
+            li.d-flex.align-items-start.mb-3
+              i.bi.bi-check-circle-fill.text-success.me-3.mt-1
+              div: strong Conflict detection
+                |  - Automatic alerts for overtime, double-booking, and compliance issues
+        .col-lg-6
+          svg(viewBox='0 0 500 350' fill='none' class='img-fluid rounded-xl shadow-lg')
+            rect(width='500' height='350' rx='16' fill='#F8F9FA')
+            rect(x='20' y='20' width='460' height='50' rx='8' fill='white' stroke='#E9ECEF' stroke-width='2')
+            text(x='40' y='52' font-family='Poppins' font-size='14' font-weight='600' fill='#1A1A2E') Schedule - Week of Nov 18
+            rect(x='20' y='90' width='60' height='240' rx='8' fill='#F0F2F5')
+            text(x='50' y='120' font-family='Poppins' font-size='10' fill='#6C757D' text-anchor='middle') Mon
+            text(x='50' y='160' font-family='Poppins' font-size='10' fill='#6C757D' text-anchor='middle') Tue
+            text(x='50' y='200' font-family='Poppins' font-size='10' fill='#6C757D' text-anchor='middle') Wed
+            text(x='50' y='240' font-family='Poppins' font-size='10' fill='#6C757D' text-anchor='middle') Thu
+            text(x='50' y='280' font-family='Poppins' font-size='10' fill='#6C757D' text-anchor='middle') Fri
+            rect(x='100' y='105' width='120' height='25' rx='6' fill='#6B5CE7')
+            rect(x='240' y='105' width='100' height='25' rx='6' fill='#4A90E2')
+            rect(x='100' y='145' width='80' height='25' rx='6' fill='#2ECC71')
+            rect(x='200' y='145' width='140' height='25' rx='6' fill='#6B5CE7')
+            rect(x='100' y='185' width='100' height='25' rx='6' fill='#FF6B6B')
+            rect(x='220' y='185' width='120' height='25' rx='6' fill='#F1C40F')
+            rect(x='100' y='225' width='140' height='25' rx='6' fill='#4A90E2')
+            rect(x='260' y='225' width='80' height='25' rx='6' fill='#2ECC71')
+            rect(x='100' y='265' width='110' height='25' rx='6' fill='#6B5CE7')
+            rect(x='230' y='265' width='130' height='25' rx='6' fill='#FF6B6B')
+
+  //- Feature: Time Tracking
+  section.py-5.bg-light-soft
+    .container.py-5
+      .row.align-items-center
+        .col-lg-6.order-lg-2.mb-4.mb-lg-0
+          span.subtitle.d-inline-block.mb-3(style='background: rgba(74,144,226,0.15); padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.875rem; color: #4A90E2; font-weight: 600;') TIME TRACKING
+          h2 Accurate Time Tracking, Anywhere
+          p.lead.text-muted Multiple clock-in options with GPS verification and biometric support eliminate time theft and ensure accurate records.
+          ul.list-unstyled
+            li.d-flex.align-items-start.mb-3
+              i.bi.bi-check-circle-fill.text-success.me-3.mt-1
+              div: strong Mobile clock-in
+                |  - Employees can clock in from their phones with GPS verification
+            li.d-flex.align-items-start.mb-3
+              i.bi.bi-check-circle-fill.text-success.me-3.mt-1
+              div: strong Geofencing
+                |  - Set boundaries for where employees can clock in
+            li.d-flex.align-items-start.mb-3
+              i.bi.bi-check-circle-fill.text-success.me-3.mt-1
+              div: strong Photo verification
+                |  - Optional selfie capture to prevent buddy punching
+            li.d-flex.align-items-start.mb-3
+              i.bi.bi-check-circle-fill.text-success.me-3.mt-1
+              div: strong Break tracking
+                |  - Automatic break reminders and tracking for compliance
+        .col-lg-6.order-lg-1
+          svg(viewBox='0 0 500 350' fill='none' class='img-fluid rounded-xl shadow-lg')
+            rect(width='500' height='350' rx='16' fill='white')
+            rect(x='150' y='30' width='200' height='290' rx='24' fill='#1A1A2E')
+            rect(x='160' y='60' width='180' height='230' rx='4' fill='white')
+            circle(cx='250' cy='320' r='15' fill='#333')
+            text(x='250' y='95' font-family='Poppins' font-size='12' font-weight='600' fill='#1A1A2E' text-anchor='middle') Clock In
+            circle(cx='250' cy='160' r='45' fill='#6B5CE7')
+            path(d='M235 160L245 170L265 150' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round')
+            text(x='250' y='230' font-family='Poppins' font-size='18' font-weight='700' fill='#1A1A2E' text-anchor='middle') 9:02 AM
+            text(x='250' y='250' font-family='Poppins' font-size='10' fill='#6C757D' text-anchor='middle') Successfully clocked in
+            rect(x='180' y='265' width='140' height='15' rx='4' fill='#E9ECEF')
+            rect(x='180' y='265' width='100' height='15' rx='4' fill='#2ECC71')
+
+  //- Feature: Payroll
+  section.py-5
+    .container.py-5
+      .row.align-items-center
+        .col-lg-6.mb-4.mb-lg-0
+          span.subtitle.d-inline-block.mb-3(style='background: rgba(46,204,113,0.15); padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.875rem; color: #2ECC71; font-weight: 600;') PAYROLL
+          h2 Payroll Processing Made Easy
+          p.lead.text-muted Process payroll in minutes with automatic calculations, tax compliance, and direct deposit support.
+          ul.list-unstyled
+            li.d-flex.align-items-start.mb-3
+              i.bi.bi-check-circle-fill.text-success.me-3.mt-1
+              div: strong Automatic calculations
+                |  - Overtime, differentials, and deductions computed automatically
+            li.d-flex.align-items-start.mb-3
+              i.bi.bi-check-circle-fill.text-success.me-3.mt-1
+              div: strong Tax compliance
+                |  - Federal, state, and local taxes calculated and filed
+            li.d-flex.align-items-start.mb-3
+              i.bi.bi-check-circle-fill.text-success.me-3.mt-1
+              div: strong Direct deposit
+                |  - Pay employees directly to their bank accounts
+            li.d-flex.align-items-start.mb-3
+              i.bi.bi-check-circle-fill.text-success.me-3.mt-1
+              div: strong Pay stubs
+                |  - Digital pay stubs accessible via the employee portal
+        .col-lg-6
+          svg(viewBox='0 0 500 350' fill='none' class='img-fluid rounded-xl shadow-lg')
+            rect(width='500' height='350' rx='16' fill='#F8F9FA')
+            rect(x='30' y='30' width='200' height='130' rx='12' fill='white' stroke='#E9ECEF' stroke-width='2')
+            text(x='50' y='60' font-family='Poppins' font-size='11' fill='#6C757D') Total Payroll
+            text(x='50' y='95' font-family='Poppins' font-size='28' font-weight='700' fill='#1A1A2E') $42,580
+            rect(x='50' y='115' width='80' height='6' rx='3' fill='#2ECC71')
+            text(x='50' y='140' font-family='Poppins' font-size='10' fill='#2ECC71') +12% from last period
+            rect(x='270' y='30' width='200' height='130' rx='12' fill='white' stroke='#E9ECEF' stroke-width='2')
+            text(x='290' y='60' font-family='Poppins' font-size='11' fill='#6C757D') Employees Paid
+            text(x='290' y='95' font-family='Poppins' font-size='28' font-weight='700' fill='#1A1A2E') 128
+            rect(x='30' y='180' width='440' height='140' rx='12' fill='white' stroke='#E9ECEF' stroke-width='2')
+            text(x='50' y='210' font-family='Poppins' font-size='12' font-weight='600' fill='#1A1A2E') Recent Transactions
+            rect(x='50' y='230' width='400' height='30' rx='6' fill='#F8F9FA')
+            text(x='70' y='250' font-family='Poppins' font-size='10' fill='#1A1A2E') Sarah Johnson
+            text(x='380' y='250' font-family='Poppins' font-size='10' font-weight='600' fill='#2ECC71') $3,450
+            rect(x='50' y='270' width='400' height='30' rx='6' fill='#F8F9FA')
+            text(x='70' y='290' font-family='Poppins' font-size='10' fill='#1A1A2E') Michael Chen
+            text(x='380' y='290' font-family='Poppins' font-size='10' font-weight='600' fill='#2ECC71') $2,890
+
+  //- More Features Grid
+  section.py-5
+    .container.py-5
+      .section-title
+        span.subtitle And More
+        h2 Additional Features
+        p Everything else you need for complete workforce management
+      .row.g-4
+        -
+          var extras = [
+            { icon: 'graph-up-arrow', color: 'pink',   title: 'Analytics & Reports',     desc: 'Real-time dashboards and custom reports for labor costs, productivity, and workforce trends.' },
+            { icon: 'phone',          color: 'teal',   title: 'Mobile App',              desc: 'Full-featured iOS and Android apps for managers and employees on the go.' },
+            { icon: 'people',         color: 'purple', title: 'Employee Self-Service',   desc: 'Let employees manage their own schedules, time-off requests, and profile information.' },
+            { icon: 'arrows-collapse',color: 'blue',   title: 'Shift Swapping',          desc: 'Enable employees to swap shifts with approval workflows and automatic notifications.' },
+            { icon: 'calendar-x',     color: 'green',  title: 'Time-Off Management',     desc: 'Track PTO, sick leave, and vacation with automated accrual and approval workflows.' },
+            { icon: 'bell',           color: 'orange', title: 'Notifications',           desc: 'Keep everyone informed with push notifications, SMS, and email alerts.' }
+          ]
+        each item, idx in extras
+          .col-md-6.col-lg-4
+            div(class=`feature-card animate-on-scroll${idx % 3 !== 0 ? ' delay-' + (idx % 3) : ''}`)
+              div(class=`feature-icon icon-${item.color}`)
+                i(class=`bi bi-${item.icon}`)
+              h4= item.title
+              p= item.desc
+
+  section.cta-section
+    .container
+      .cta-content
+        h2 See SpykApps in Action
+        p Schedule a personalized demo and see how SpykApps can transform your workforce management.
+        .d-flex.flex-wrap.justify-content-center.gap-3
+          a.btn.btn-lg(href='#' style='background: white; color: var(--ss-primary);') Book a Demo
+          a.btn.btn-outline-white.btn-lg(href='pricing.html') View Pricing

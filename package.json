@@ -1,0 +1,17 @@
+{
+  "name": "spykapps-open-landing-template",
+  "version": "1.0.0",
+  "description": "SpykApps Open Landing Template — a free, open-source Bootstrap 5 + Pug + Sass landing page template for SaaS products.",
+  "private": true,
+  "scripts": {
+    "dev": "gulp",
+    "build": "gulp build"
+  },
+  "devDependencies": {
+    "browser-sync": "^3.0.2",
+    "gulp": "^5.0.0",
+    "gulp-pug": "^5.0.0",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.77.0"
+  }
+}

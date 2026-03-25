@@ -1,0 +1,115 @@
+extends layouts/base
+
+block vars
+  - activePage = 'contact'
+  - pageTitle = 'Contact Us'
+  - pageDescription = 'Contact SpykApps - Get in touch with our team for sales, support, or general inquiries.'
+
+block content
+  section.page-header
+    .container
+      h1 Contact Us
+      p.lead We'd love to hear from you. Get in touch with our team.
+      nav(aria-label='breadcrumb')
+        ol.breadcrumb
+          li.breadcrumb-item: a(href='index.html') Home
+          li.breadcrumb-item.active Contact
+
+  section.py-5
+    .container.py-5
+      .row.g-5
+        .col-lg-5
+          .contact-info-card.h-100
+            h3.mb-4 Get in Touch
+            p.mb-4(style='opacity: 0.9;') Have questions about SpykApps? Our team is here to help. Reach out through any of the channels below.
+            .contact-info-item
+              .contact-info-icon: i.bi.bi-envelope
+              .contact-info-text
+                h5 Email Us
+                p hello@spykapps.com
+            .contact-info-item
+              .contact-info-icon: i.bi.bi-telephone
+              .contact-info-text
+                h5 Call Us
+                p +1 (555) 123-4567
+            .contact-info-item
+              .contact-info-icon: i.bi.bi-geo-alt
+              .contact-info-text
+                h5 Visit Us
+                p
+                  | 100 Market St, Suite 300
+                  br
+                  | San Francisco, CA 94105
+            .contact-info-item
+              .contact-info-icon: i.bi.bi-clock
+              .contact-info-text
+                h5 Business Hours
+                p Mon - Fri: 9AM - 6PM PST
+            hr(style='border-color: rgba(255,255,255,0.2); margin: 2rem 0;')
+            h5 Follow Us
+            .d-flex.gap-2.mt-3
+              a.btn.btn-sm(href='#' style='background: rgba(255,255,255,0.2); color: white; border-radius: 8px; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;'): i.bi.bi-twitter-x
+              a.btn.btn-sm(href='#' style='background: rgba(255,255,255,0.2); color: white; border-radius: 8px; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;'): i.bi.bi-linkedin
+              a.btn.btn-sm(href='#' style='background: rgba(255,255,255,0.2); color: white; border-radius: 8px; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;'): i.bi.bi-facebook
+
+        .col-lg-7
+          .contact-form
+            h3.mb-4 Send Us a Message
+            form#contactForm
+              .row.g-3
+                .col-md-6
+                  label.form-label First Name *
+                  input.form-control(type='text' placeholder='John' required)
+                .col-md-6
+                  label.form-label Last Name *
+                  input.form-control(type='text' placeholder='Doe' required)
+                .col-md-6
+                  label.form-label Email *
+                  input.form-control(type='email' placeholder='john@company.com' required)
+                .col-md-6
+                  label.form-label Phone
+                  input.form-control(type='tel' placeholder='+1 (555) 000-0000')
+                .col-12
+                  label.form-label Company
+                  input.form-control(type='text' placeholder='Your company name')
+                .col-12
+                  label.form-label Subject *
+                  select.form-control(required)
+                    option(value='') Select a topic
+                    option(value='sales') Sales Inquiry
+                    option(value='support') Technical Support
+                    option(value='demo') Request a Demo
+                    option(value='partnership') Partnership Opportunity
+                    option(value='other') Other
+                .col-12
+                  label.form-label Message *
+                  textarea.form-control(rows='5' placeholder='How can we help you?' required)
+                .col-12
+                  button.btn.btn-primary.btn-lg(type='submit')
+                    i.bi.bi-send.me-2
+                    | Send Message
+
+  section.py-5.bg-light-soft
+    .container.py-5
+      .section-title
+        span.subtitle Quick Links
+        h2 Looking for Something Specific?
+      .row.g-4
+        .col-md-4
+          .feature-card.text-center.animate-on-scroll
+            .feature-icon.icon-purple.mx-auto: i.bi.bi-headset
+            h4 Customer Support
+            p Already a customer? Visit our help center for guides, FAQs, and ticket support.
+            a.btn.btn-outline-primary.btn-sm(href='#') Visit Help Center
+        .col-md-4
+          .feature-card.text-center.animate-on-scroll.delay-1
+            .feature-icon.icon-blue.mx-auto: i.bi.bi-play-circle
+            h4 Book a Demo
+            p See SpykApps in action with a personalized demo from our product experts.
+            a.btn.btn-outline-primary.btn-sm(href='#') Schedule Demo
+        .col-md-4
+          .feature-card.text-center.animate-on-scroll.delay-2
+            .feature-icon.icon-green.mx-auto: i.bi.bi-briefcase
+            h4 Careers
+            p Want to join our team? Check out our open positions and apply today.
+            a.btn.btn-outline-primary.btn-sm(href='#') View Jobs

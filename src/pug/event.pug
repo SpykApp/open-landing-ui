@@ -1,0 +1,230 @@
+extends layouts/base
+
+block vars
+  - activePage = ''
+  - pageTitle = 'SpykApps Summit 2024 - The Future of Workforce Management'
+  - pageDescription = 'SpykApps Summit 2024 - The premier workforce management conference. Join industry leaders for insights on the future of work.'
+
+block extraHead
+  style.
+    .event-hero {
+      background: linear-gradient(135deg, #1A1A2E 0%, #2D2D5A 50%, #16213E 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding-top: 100px;
+    }
+    .event-hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background:
+        radial-gradient(circle at 20% 80%, rgba(107, 92, 231, 0.3) 0%, transparent 40%),
+        radial-gradient(circle at 80% 20%, rgba(255, 107, 107, 0.2) 0%, transparent 40%);
+      z-index: 1;
+    }
+    .event-hero .container { position: relative; z-index: 2; }
+    .event-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: rgba(107, 92, 231, 0.3);
+      border: 1px solid rgba(107, 92, 231, 0.5);
+      border-radius: var(--ss-radius-pill);
+      padding: 0.75rem 1.5rem;
+      margin-bottom: 1.5rem;
+      color: white;
+      font-weight: 500;
+    }
+    .event-title {
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      font-weight: 700;
+      color: white;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+    }
+    .event-title span {
+      background: linear-gradient(135deg, #6B5CE7 0%, #FF6B6B 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .event-subtitle {
+      font-size: 1.25rem;
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 2rem;
+      max-width: 600px;
+    }
+    .event-info { display: flex; flex-wrap: wrap; gap: 2rem; margin-bottom: 2rem; }
+    .event-info-item { display: flex; align-items: center; gap: 0.75rem; color: rgba(255,255,255,0.9); }
+    .event-info-item i {
+      width: 40px; height: 40px;
+      display: flex; align-items: center; justify-content: center;
+      background: rgba(107, 92, 231, 0.3);
+      border-radius: var(--ss-radius);
+      color: var(--ss-primary-light);
+    }
+    .countdown-item {
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: var(--ss-radius-lg);
+      padding: 1.25rem 1.75rem;
+      text-align: center;
+      min-width: 100px;
+    }
+    .countdown-value { display: block; font-size: 2.5rem; font-weight: 700; color: white; line-height: 1; margin-bottom: 0.25rem; }
+    .countdown-label { font-size: 0.875rem; color: rgba(255,255,255,0.7); text-transform: uppercase; }
+
+block content
+  //- Event Hero
+  section.event-hero
+    .container
+      .row.align-items-center
+        .col-lg-7
+          .event-badge
+            i.bi.bi-calendar-event
+            span Annual Conference &bull; December 10-12, 2024
+          h1.event-title
+            | The Future of
+            br
+            span Workforce Management
+          p.event-subtitle Join 2,000+ HR leaders, operations managers, and workforce technology innovators for three days of insights, networking, and innovation.
+          .event-info
+            .event-info-item
+              i.bi.bi-geo-alt
+              div
+                strong San Francisco, CA
+                br
+                small Moscone Center West
+            .event-info-item
+              i.bi.bi-calendar3
+              div
+                strong December 10-12, 2024
+                br
+                small 3 Days of Content
+            .event-info-item
+              i.bi.bi-people
+              div
+                strong 2,000+ Attendees
+                br
+                small Expected
+          .event-countdown.d-flex.flex-wrap.gap-3.mb-4
+            .countdown-item
+              span.countdown-value(id='days') 00
+              span.countdown-label Days
+            .countdown-item
+              span.countdown-value(id='hours') 00
+              span.countdown-label Hours
+            .countdown-item
+              span.countdown-value(id='minutes') 00
+              span.countdown-label Minutes
+            .countdown-item
+              span.countdown-value(id='seconds') 00
+              span.countdown-label Seconds
+          .d-flex.flex-wrap.gap-3
+            a.btn.btn-primary.btn-lg(href='#register') Register Now
+            a.btn.btn-outline-white.btn-lg(href='#agenda') View Agenda
+
+        .col-lg-5.mt-5.mt-lg-0
+          .p-4(style='background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--ss-radius-xl);')
+            h3.text-white.mb-4 Register for SpykApps Summit 2024
+            form#registerForm
+              .mb-3
+                label.form-label.text-white-50 Full Name
+                input.form-control(type='text' placeholder='Jane Smith' required style='background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.2); color: white;')
+              .mb-3
+                label.form-label.text-white-50 Work Email
+                input.form-control(type='email' placeholder='jane@company.com' required style='background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.2); color: white;')
+              .mb-3
+                label.form-label.text-white-50 Company
+                input.form-control(type='text' placeholder='Your Company' style='background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.2); color: white;')
+              .mb-3
+                label.form-label.text-white-50 Ticket Type
+                select.form-control(style='background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.2); color: white;')
+                  option General Admission — $499
+                  option VIP All-Access — $999
+                  option Virtual Pass — $149
+              button.btn.btn-primary.w-100(type='submit') Secure Your Spot
+
+  //- Speakers
+  section.event-speakers.py-5
+    .container.py-5
+      .section-title
+        span.subtitle Keynote Speakers
+        h2 Learn from Industry Leaders
+        p World-class speakers sharing insights on the future of workforce management.
+      .row.g-4.justify-content-center
+        -
+          var speakers = [
+            { initials: 'AL', gradient: '#6B5CE7, #8B7DF2', name: 'Amanda Lewis',   title: 'Chief People Officer',       company: 'Fortune 500 Tech Co.' },
+            { initials: 'RK', gradient: '#FF6B6B, #FF8585', name: 'Robert Kim',     title: 'Future of Work Researcher',  company: 'MIT Sloan School' },
+            { initials: 'MP', gradient: '#4A90E2, #6BA8EE', name: 'Maria Patel',    title: 'VP of HR Technology',        company: 'Deloitte Consulting' },
+            { initials: 'JW', gradient: '#2ECC71, #58D68D', name: 'James Wilson',   title: 'CEO & Co-founder',           company: 'WorkforceAI' }
+          ]
+        each s in speakers
+          .col-lg-3.col-md-6
+            .speaker-card
+              .speaker-image(style=`background: linear-gradient(135deg, ${s.gradient}); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem; font-weight: 700;`)= s.initials
+              h4= s.name
+              p.text-primary.fw-semibold.mb-1= s.title
+              p.text-muted.small= s.company
+
+  //- Agenda Preview
+  section.py-5.bg-light-soft#agenda
+    .container.py-5
+      .section-title
+        span.subtitle Agenda
+        h2 Three Days of Inspiration
+      .row.g-4
+        -
+          var days = [
+            { day: 'Day 1', date: 'Dec 10', theme: 'The Future of Work', color: '#6B5CE7', sessions: ['Opening Keynote: Workforce 2030', 'Panel: AI in Scheduling & Payroll', 'Workshop: Compliance Best Practices', 'Networking Reception'] },
+            { day: 'Day 2', date: 'Dec 11', theme: 'Technology & Innovation', color: '#4A90E2', sessions: ['Keynote: Real-Time Workforce Analytics', 'Product Deep Dive: SpykApps 3.0', 'Case Studies: Enterprise Implementation', 'Hackathon: Build the Future'] },
+            { day: 'Day 3', date: 'Dec 12', theme: 'People & Culture', color: '#2ECC71', sessions: ['Keynote: Employee Experience at Scale', 'Workshop: Retention Strategies', 'Panel: Diversity in Scheduling', 'Closing Ceremony & Awards'] }
+          ]
+        each d in days
+          .col-md-4
+            .feature-card.h-100
+              .d-flex.align-items-center.gap-3.mb-3
+                div(style=`width: 48px; height: 48px; background: ${d.color}; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 0.75rem; line-height: 1.2; text-align: center;`) #{d.day}
+                div
+                  strong= d.date
+                  br
+                  small.text-muted= d.theme
+              ul.list-unstyled.mb-0
+                each session in d.sessions
+                  li.d-flex.align-items-start.gap-2.mb-2
+                    i.bi.bi-check-circle-fill(style=`color: ${d.color}; margin-top: 3px;`)
+                    span= session
+
+  //- CTA
+  section.cta-section#register
+    .container
+      .cta-content
+        h2 Don't Miss SpykApps Summit 2024
+        p Early bird pricing ends November 30th. Seats are limited — secure yours today.
+        .d-flex.flex-wrap.justify-content-center.gap-3
+          a.btn.btn-lg(href='#' style='background: white; color: var(--ss-primary);') Register Now — Save 20%
+          a.btn.btn-outline-white.btn-lg(href='contact.html') Contact for Group Rates
+
+block extraScripts
+  script.
+    // Countdown to Dec 10, 2024
+    const eventDate = new Date('2024-12-10T09:00:00');
+    function updateCountdown() {
+      const now = new Date();
+      const diff = eventDate - now;
+      if (diff <= 0) return;
+      const d = Math.floor(diff / 86400000);
+      const h = Math.floor((diff % 86400000) / 3600000);
+      const m = Math.floor((diff % 3600000) / 60000);
+      const s = Math.floor((diff % 60000) / 1000);
+      document.getElementById('days').textContent    = String(d).padStart(2,'0');
+      document.getElementById('hours').textContent   = String(h).padStart(2,'0');
+      document.getElementById('minutes').textContent = String(m).padStart(2,'0');
+      document.getElementById('seconds').textContent = String(s).padStart(2,'0');
+    }
+    updateCountdown();
+    setInterval(updateCountdown, 1000);

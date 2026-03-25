@@ -1,0 +1,106 @@
+extends layouts/base
+
+block vars
+  - activePage = 'blog'
+  - pageTitle = 'Blog'
+  - pageDescription = 'SpykApps Blog - Insights on workforce management, HR technology, and industry best practices.'
+
+block content
+  section.page-header
+    .container
+      h1 Blog &amp; Resources
+      p.lead Insights, tips, and news on workforce management
+      nav(aria-label='breadcrumb')
+        ol.breadcrumb
+          li.breadcrumb-item: a(href='index.html') Home
+          li.breadcrumb-item.active Blog
+
+  section.py-5
+    .container.py-4
+      .row.g-5
+        .col-lg-8
+          .row.g-4
+            //- Blog post cards
+            -
+              var posts = [
+                { category: 'Scheduling', date: 'Nov 15, 2024', read: '5 min', title: '10 Strategies to Reduce Employee Scheduling Conflicts', excerpt: 'Learn proven techniques to minimize scheduling conflicts and improve satisfaction.', svgFill: '#F0F2F5', svgInner: '#E9ECEF', delay: '' },
+                { category: 'Compliance', date: 'Nov 10, 2024', read: '7 min', title: '2024 Labor Law Updates Every Employer Should Know', excerpt: 'Stay compliant with the latest changes in labor regulations and requirements.', svgFill: '#FFF5F5', svgInner: '#FFE5E5', delay: 'delay-1' },
+                { category: 'Productivity', date: 'Nov 5, 2024', read: '6 min', title: 'How Automation is Transforming HR Operations', excerpt: 'Discover how modern HR teams are using automation to save time and reduce errors.', svgFill: '#F0FFF4', svgInner: '#D4EDDA', delay: '' },
+                { category: 'Time Tracking', date: 'Oct 28, 2024', read: '4 min', title: 'The Complete Guide to Mobile Time Tracking', excerpt: 'Everything you need to know about implementing mobile time tracking.', svgFill: '#F5F0FF', svgInner: '#E8DAFF', delay: 'delay-1' },
+                { category: 'Payroll', date: 'Oct 20, 2024', read: '8 min', title: 'Payroll Mistakes That Cost Companies Thousands', excerpt: 'Common payroll errors and how to avoid them with automated systems.', svgFill: '#FFF9E6', svgInner: '#FFF3CD', delay: '' },
+                { category: 'Industry', date: 'Oct 15, 2024', read: '5 min', title: 'The Future of Workforce Management: 2025 Trends', excerpt: 'What to expect in workforce technology and management practices next year.', svgFill: '#E6F7FF', svgInner: '#CCE9FF', delay: 'delay-1' }
+              ]
+            each post in posts
+              .col-md-6
+                article(class=`blog-card animate-on-scroll ${post.delay}`)
+                  .blog-card-image
+                    svg(viewBox='0 0 400 220' fill='none')
+                      rect(width='400' height='220' fill=post.svgFill)
+                      rect(x='40' y='40' width='320' height='140' rx='8' fill=post.svgInner)
+                      circle(cx='200' cy='110' r='40' fill='#6B5CE7' opacity='0.3')
+                    span.blog-card-category= post.category
+                  .blog-card-body
+                    .blog-card-meta
+                      span
+                        i.bi.bi-calendar3
+                        |  #{post.date}
+                      span
+                        i.bi.bi-clock
+                        |  #{post.read}
+                    h4: a(href='blog-single.html')= post.title
+                    p= post.excerpt
+                    a.blog-card-link(href='blog-single.html')
+                      | Read More&nbsp;
+                      i.bi.bi-arrow-right
+
+          nav.mt-5
+            ul.pagination.justify-content-center
+              li.page-item.disabled: a.page-link(href='#') Previous
+              li.page-item.active: a.page-link(href='#') 1
+              li.page-item: a.page-link(href='#') 2
+              li.page-item: a.page-link(href='#') 3
+              li.page-item: a.page-link(href='#') Next
+
+        //- Sidebar
+        .col-lg-4
+          .blog-sidebar
+            .sidebar-widget
+              h4 Search
+              .sidebar-search
+                input.form-control(type='text' placeholder='Search articles...')
+                button(type='submit'): i.bi.bi-search
+
+            .sidebar-widget
+              h4 Categories
+              ul.sidebar-categories
+                li: a(href='#') Scheduling
+                  span 12
+                li: a(href='#') Time Tracking
+                  span 8
+                li: a(href='#') Payroll
+                  span 10
+                li: a(href='#') Compliance
+                  span 6
+                li: a(href='#') Productivity
+                  span 15
+                li: a(href='#') Industry News
+                  span 9
+
+            .sidebar-widget
+              h4 Popular Tags
+              .tag-cloud
+                a(href='#') HR Tech
+                a(href='#') Scheduling
+                a(href='#') Payroll
+                a(href='#') Compliance
+                a(href='#') Remote Work
+                a(href='#') Automation
+                a(href='#') Employee Experience
+                a(href='#') Analytics
+
+            .sidebar-widget(style='background: var(--ss-primary-gradient); color: white; border-radius: var(--ss-radius-xl);')
+              h4(style='color: white;') Subscribe to Newsletter
+              p(style='opacity: 0.9; font-size: 0.9375rem;') Get the latest workforce management insights delivered to your inbox.
+              form.newsletter-form
+                input.form-control.mb-2(type='email' placeholder='Your email' style='background: rgba(255,255,255,0.2); border: none; color: white;' required)
+                button.btn.w-100(type='submit' style='background: white; color: var(--ss-primary);') Subscribe
